@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Finger Paint", cursive;
+}
+
+:root {
+	--background: linear-gradient(45deg, rgb(195, 8, 8), rgb(19, 19, 203));
+	--button: #12990d;
+	--winner: #244556;
+	--text: #100e0e;
+	--marks: #919d10;
+}
+
+body {
+	background: var(--background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#headline {
+	margin-bottom: 50px;
+	color: var(--text);
+	font-size: 40px;
+}
+
+.game-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#grid {
+	height: 450px;
+	width: 450px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.square {
+	height: 150px;
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--marks);
+	font-size: 120px;
+}
+
+.zero,
+.one,
+.three,
+.four {
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.two,
+.five {
+	border-bottom: 2px solid black;
+}
+
+.six,
+.seven {
+	border-right: 2px solid black;
+}
+
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 30px;
+	padding: 10px 20px;
+	border-radius: 12px;
+	background-color: var(--button);
+	color: var(--text);
+	font-size: 18px;
+	transition: 200ms transform;
+	font-weight: 600;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #04aa41;
+}
+
+button:active {
+	transform: translateY(1px);
+}
+
+.copyrights {
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+}
