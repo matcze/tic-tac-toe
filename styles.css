@@ -10,6 +10,7 @@
 :root {
 	--background: linear-gradient(45deg, rgb(195, 8, 8), rgb(19, 19, 203));
 	--button: #12990d;
+	--button-hover: #04aa41;
 	--winner: #244556;
 	--text: #100e0e;
 	--marks: #919d10;
@@ -19,14 +20,7 @@ body {
 	background: var(--background);
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	height: 100vh;
-}
-
-#headline {
-	margin-bottom: 50px;
-	color: var(--text);
-	font-size: 40px;
 }
 
 .game-container {
@@ -36,11 +30,18 @@ body {
 	align-items: center;
 }
 
+#headline {
+	margin-bottom: 50px;
+	color: var(--text);
+	font-size: 40px;
+}
+
+
 #grid {
 	height: 450px;
 	width: 450px;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .square {
@@ -86,7 +87,7 @@ button {
 
 button:hover {
 	cursor: pointer;
-	background-color: #04aa41;
+	background-color: var(--button-hover);
 }
 
 button:active {

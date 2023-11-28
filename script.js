@@ -1,6 +1,7 @@
 let headline = document.getElementById("headline")
 let restartBtn = document.getElementById("btn")
 let squares = Array.from(document.getElementsByClassName("square"))
+let yearEl = document.getElementById("year-el")
 
 const O_TEXT = "O"
 const X_TEXT = "X"
@@ -99,10 +100,12 @@ const restartGame = () => {
 	}
 	headline.textContent = "Tic Tac Toe"
 	currentPlayer = X_TEXT
+	playerOneWon = false
+	playerTwoWon = false
 }
 
 restartBtn.addEventListener("click", restartGame)
 startGame()
 
-// Good enough to deploy
-// of course you can change the way of appering cross and circle, maybe css?
+let recYear = new Date().getFullYear()
+yearEl.textContent = recYear
